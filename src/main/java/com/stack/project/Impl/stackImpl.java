@@ -1,37 +1,47 @@
 package com.stack.project.Impl;
 
+import java.util.Vector;
+
 import com.stack.project.stack;
 
-public class stackImpl implements stack {
+public class stackImpl <E> implements stack<E>  {
 
+    private Vector<E> vec = new Vector<>(); 
+    
     @Override
     public boolean empty() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'empty'");
+
+        return vec.isEmpty();
+    
     }
 
     @Override
-    public Object peek() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'peek'");
+    public E peek() {
+
+        return vec.lastElement();
+        
     }
 
     @Override
-    public Object pop() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'pop'");
+    public E pop() {
+
+        return vec.removeLast();
+
     }
 
     @Override
-    public Object push(Object item) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'push'");
+    public E push(E item) {
+
+        vec.addElement(item);
+        return item;
+
     }
 
     @Override
-    public int search(Object o) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'search'");
+    public int search(E e) {
+        
+       return vec.lastIndexOf(e);
+
     }
 
 

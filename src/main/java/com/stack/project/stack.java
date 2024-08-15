@@ -8,6 +8,6 @@ public interface stack<E> {
     public E peek();
     public E pop();
     public E push(E item);
-    public int search(Object o); 
+    public int search(E e); 
 
 }
