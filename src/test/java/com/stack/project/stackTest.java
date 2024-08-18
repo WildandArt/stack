@@ -3,10 +3,13 @@ package com.stack.project;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
 
 import com.stack.project.Impl.stackImpl;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class stackTest {
 
@@ -52,11 +55,14 @@ public class stackTest {
 
 
     @Test
-    public void testEmpty() {
-    }
-
-    @Test
     public void testExceptions() {
+        assertThrows(RuntimeException.class, () -> {
+            st.pop();
+        });
+
+        assertThrows(RuntimeException.class, () -> {
+            st.peek();
+        });
     }
 
 

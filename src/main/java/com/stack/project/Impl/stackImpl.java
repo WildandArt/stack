@@ -51,10 +51,12 @@ public class stackImpl <E> implements stack<E>  {
     @Override
     public int search(E e) {
 
-       return vec.lastIndexOf(e);
+        int index = vec.lastIndexOf(e);
+        if (index >= 0) {
+            return vec.size() - index;
+        }
+        return -1;
 
     }
 
-
-    
 }

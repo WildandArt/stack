@@ -1,5 +1,5 @@
-# Stack Project
-<!-- 
+#   Stack Project
+
 ## Overview
 
 This project implements a generic Stack data structure in Java. It includes basic stack operations such as push, pop, peek, and search, along with unit tests to ensure correctness.
@@ -71,4 +71,5 @@ If Maven is not already installed, follow these steps to install it:
 Unit tests are included to verify the functionality of the stack implementation. To run the tests, use the following Maven command:
 
 ```bash
-mvn test -->
+mvn test
+```
