@@ -45,7 +45,7 @@ If Maven is not already installed, follow these steps to install it:
 1. **Clone the Repository**:
    - Clone the project repository to your local machine:
      ```bash
-     git clone https://github.com/your-username/stack-project.git
+     git clone https://github.com/WildandArt/stack.git
      ```
    - Navigate to the project directory:
      ```bash
