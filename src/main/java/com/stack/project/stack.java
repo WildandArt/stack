@@ -1,7 +1,5 @@
 package com.stack.project;
 
-import java.util.Vector;
-
 public interface stack<E> {
 
     public boolean empty();
