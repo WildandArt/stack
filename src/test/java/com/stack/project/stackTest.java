@@ -44,7 +44,7 @@ public class stackTest {
         st.push(1);
         st.push(2);
         st.push(3);
-        assertEquals(1, st.search(3));  
+        assertEquals(1, st.search(3));
         assertEquals(2, st.search(2));
         assertEquals(3, st.search(1));
         assertEquals(-1, st.search(4));

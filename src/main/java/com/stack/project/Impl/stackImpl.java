@@ -8,7 +8,7 @@ public class stackImpl <E> implements stack<E>  {
 
     private Vector<E> vec;
 
-    public void stackImpl() {
+    public stackImpl() {
         vec = new Vector<>(); 
     }
     
@@ -33,7 +33,7 @@ public class stackImpl <E> implements stack<E>  {
     public E pop() {
 
         if(vec.isEmpty()) {
-            throw new RuntimeException("Stack Is empty. Can not peek.");
+            throw new RuntimeException("Stack Is empty. Can not pop.");
         }
 
         return vec.removeLast();
