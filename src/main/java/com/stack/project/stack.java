@@ -2,12 +2,12 @@ package com.stack.project;
 
 /**
  * @brief 
- * The stack<E> interface provides methods for common stack operations such as 
+ * The stack<T> interface provides methods for common stack operations such as 
  * pushing, popping, peeking, checking if the stack is empty, and searching for elements.
  *
- * @param <E> the type of elements in this stack
+ * @param <T> the type of elements in this stack
  */
-public interface stack<E> {
+public interface stack<T> {
 
     /**
      * @brief Checks if the stack is empty.
@@ -16,7 +16,7 @@ public interface stack<E> {
      *
      * @return true if the stack is empty; false otherwise
      */
-    public boolean empty();
+    public boolean isEmpty();
 
     /**
      * @brief Returns the top element of the stack without removing it.
@@ -27,7 +27,7 @@ public interface stack<E> {
      * @return the top element of the stack
      * @throws RuntimeException if the stack is empty
      */
-    public E peek();
+    public T peek();
 
     /**
      * @brief Removes and returns the top element of the stack.
@@ -37,7 +37,7 @@ public interface stack<E> {
      * @return the top element of the stack
      * @throws RuntimeException if the stack is empty
      */
-    public E pop();
+    public T pop();
 
     /**
      * @brief Pushes an item onto the top of the stack.
@@ -47,7 +47,7 @@ public interface stack<E> {
      * @param item the item to be pushed onto the stack
      * @return the item argument that was pushed onto the stack
      */
-    public E push(E item);
+    public T push(T item);
 
     /**
      * @brief Searches for an element in the stack.
@@ -60,6 +60,6 @@ public interface stack<E> {
      * @return the 1-based position of the element from the top of the stack,
      *         or -1 if the element is not found
      */
-    public int search(E e); 
+    public int search(T e); 
 
 }

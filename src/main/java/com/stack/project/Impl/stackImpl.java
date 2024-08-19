@@ -5,9 +5,9 @@ import java.util.Vector;
 import com.stack.project.stack;
 
 
-public class stackImpl <E> implements stack<E>  {
+public class stackImpl <T> implements stack<T>  {
 
-    private E[] array;
+    private T[] array;
 
     private Integer top;
 
@@ -17,7 +17,7 @@ public class stackImpl <E> implements stack<E>  {
     @SuppressWarnings("unchecked")
     public stackImpl(int size) {
     
-        this.array = (E[]) new Object[size];
+        this.array = (T[]) new Object[size];
     
         capacity = size;
     
@@ -26,14 +26,14 @@ public class stackImpl <E> implements stack<E>  {
     }
     
     @Override
-    public boolean empty() {
+    public boolean isEmpty() {
 
         return (-1 == top);
     
     }
 
     @Override
-    public E peek() {
+    public T peek() {
 
         if(-1 == top) {
            throw new RuntimeException("Stack Is empty. Can not peek.");
@@ -43,7 +43,7 @@ public class stackImpl <E> implements stack<E>  {
     }
 
     @Override
-    public E pop() {
+    public T pop() {
 
         if(-1 == top) {
             throw new RuntimeException("Stack Is empty. Can not pop.");
@@ -53,7 +53,7 @@ public class stackImpl <E> implements stack<E>  {
     }
 
     @Override
-    public E push(E item) {
+    public T push(T item) {
 
         if(capacity == (top + 1))
         {
@@ -66,7 +66,7 @@ public class stackImpl <E> implements stack<E>  {
     }
 
     @Override
-    public int search(E e) {
+    public int search(T e) {
     
        if(array.length < 1) {
 
@@ -89,7 +89,22 @@ public class stackImpl <E> implements stack<E>  {
     @Override
     public String toString() {
 
-      return array.toString();
+        StringBuilder objectString = new StringBuilder("|");
+
+        for(int i = 0; i <= top; i++) {
+
+            objectString.append(array[i]);
+
+            if(i < top){
+
+                objectString.append(", ");
+
+            }
+        }
+
+        objectString.append("|");
+
+        return objectString.toString();
 
     }
 }

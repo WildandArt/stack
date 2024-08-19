@@ -16,7 +16,6 @@ public class stackTest {
 
     @BeforeEach
     public void setUp() {
-        // Initialize the stack with a capacity of 3 for testing
         st = new stackImpl<>(3);
     }
 
@@ -60,6 +59,7 @@ public class stackTest {
         assertEquals(2, st.search(2));
         assertEquals(3, st.search(1));
         assertEquals(-1, st.search(4));
+
     }
 
     @Test
@@ -75,6 +75,9 @@ public class stackTest {
 
     @Test
     public void testPrint() {
-        
+        st.push(1);
+        st.push(2);
+        st.push(3);
+        System.out.println(st);
     }
 }

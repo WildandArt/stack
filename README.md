@@ -1,7 +1,7 @@
 ![Java](https://img.shields.io/badge/Java-22-007396?style=for-the-badge&logo=java)
 ![JUnit](https://img.shields.io/badge/JUnit-5.0-25A162?style=for-the-badge&logo=junit5)
 
-#   Stack Project
+#   Stack Data Structure
 
 ## Overview
 
