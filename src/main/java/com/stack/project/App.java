@@ -1,13 +1,9 @@
 package com.stack.project;
 
-/**
- * Hello world!
- *
- */
 public class App 
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+    //The main method is not required in this context because we are using Maven to run our tests.
     }
 }
