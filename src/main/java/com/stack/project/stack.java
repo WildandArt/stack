@@ -3,7 +3,10 @@ package com.stack.project;
 /**
  * @brief 
  * The stack<T> interface provides methods for common stack operations such as 
- * pushing, popping, peeking, checking if the stack is empty, and searching for elements.
+ * pushing, popping, peeking, checking if the stack is empty or full, and searching for elements.
+ *
+ * This interface defines the contract for a stack data structure, where elements follow
+ * the Last-In-First-Out (LIFO) principle.
  *
  * @param <T> the type of elements in this stack
  */
@@ -18,8 +21,14 @@ public interface stack<T> {
      */
     public boolean isEmpty();
 
+    /**
+     * @brief Checks if the stack is full.
+     *
+     * This method determines whether the stack has reached its maximum capacity.
+     *
+     * @return true if the stack is full; false otherwise
+     */
     public boolean isFull();
-
 
     /**
      * @brief Returns the top element of the stack without removing it.
@@ -63,11 +72,23 @@ public interface stack<T> {
      * @return the 1-based position of the element from the top of the stack,
      *         or -1 if the element is not found
      */
-    public int search(T e); 
+    public int search(T e);
 
+    /**
+     * @brief Returns the current size of the stack.
+     *
+     * This method returns the number of elements currently in the stack.
+     *
+     * @return the number of elements in the stack
+     */
     public int size();
 
+    /**
+     * @brief Returns the total capacity of the stack.
+     *
+     * This method returns the maximum number of elements the stack can hold.
+     *
+     * @return the capacity of the stack
+     */
     public int capacity();
-
-
 }

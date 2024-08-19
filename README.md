@@ -9,7 +9,7 @@ This project implements a generic Stack data structure in Java. It includes basi
 
 ### Interface Documentation
 
-The `stack<E>` interface defines the basic operations of a stack data structure, including methods for pushing, popping, peeking, checking if the stack is empty, and searching for elements.
+The `stack<T>` interface defines the basic operations of a stack data structure, including methods for pushing, popping, peeking, checking if the stack is empty, and searching for elements.
 
  1. `boolean empty()`
 
@@ -19,21 +19,21 @@ The `stack<E>` interface defines the basic operations of a stack data structure,
   - `true` if the stack is empty.
   - `false` if the stack contains one or more elements.
 
-2. `E peek()`
+2. `T peek()`
 
 - **Brief:** Returns the top element of the stack without removing it.
 - **Description:** This method allows the caller to view the element at the top of the stack without modifying the stack.
 - **Returns:** The top element of the stack.
 - **Throws:** `RuntimeException` if the stack is empty.
 
-3. `E pop()`
+3. `T pop()`
 
 - **Brief:** Removes and returns the top element of the stack.
 - **Description:** This method removes the top element from the stack and returns it.
 - **Returns:** The top element of the stack.
 - **Throws:** `RuntimeException` if the stack is empty.
 
-4. `E push(E item)`
+4. `T push(T item)`
 
 - **Brief:** Pushes an item onto the top of the stack.
 - **Description:** This method adds an item to the top of the stack.
@@ -41,7 +41,7 @@ The `stack<E>` interface defines the basic operations of a stack data structure,
   - `item`: The item to be pushed onto the stack.
 - **Returns:** The item argument that was pushed onto the stack.
 
-5. `int search(E e)`
+5. `int search(T e)`
 
 - **Brief:** Searches for an element in the stack.
 - **Description:** This method searches the stack for a specific element and returns its 1-based position from the top of the stack. If the element is not found, the method returns `-1`.
@@ -50,6 +50,22 @@ The `stack<E>` interface defines the basic operations of a stack data structure,
 - **Returns:** 
   - The 1-based position of the element from the top of the stack.
   - `-1` if the element is not found.
+
+6. `int size()`
+
+- **Description:** Returns the current number of elements in the stack.
+- **Returns:** The number of elements in the stack.
+
+7. `int capacity()`
+
+- **Description:** Returns the total capacity of the stack.
+- **Returns:** The maximum number of elements the stack can hold.
+
+8. `boolean isFull()`
+
+- **Description:** Checks if the stack is full.
+- **Returns:** `true` if the stack has reached its maximum capacity; `false` otherwise.
+
 
 
 ## Prerequisites
