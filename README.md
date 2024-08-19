@@ -4,6 +4,51 @@
 
 This project implements a generic Stack data structure in Java. It includes basic stack operations such as push, pop, peek, and search, along with unit tests to ensure correctness.
 
+## `stack<E>` Interface Documentation
+
+The `stack<E>` interface defines the basic operations of a stack data structure, including methods for pushing, popping, peeking, checking if the stack is empty, and searching for elements.
+
+### 1. `boolean empty()`
+
+- **Brief:** Checks if the stack is empty.
+- **Description:** This method determines whether the stack contains any elements.
+- **Returns:** 
+  - `true` if the stack is empty.
+  - `false` if the stack contains one or more elements.
+
+### 2. `E peek()`
+
+- **Brief:** Returns the top element of the stack without removing it.
+- **Description:** This method allows the caller to view the element at the top of the stack without modifying the stack.
+- **Returns:** The top element of the stack.
+- **Throws:** `RuntimeException` if the stack is empty.
+
+### 3. `E pop()`
+
+- **Brief:** Removes and returns the top element of the stack.
+- **Description:** This method removes the top element from the stack and returns it.
+- **Returns:** The top element of the stack.
+- **Throws:** `RuntimeException` if the stack is empty.
+
+### 4. `E push(E item)`
+
+- **Brief:** Pushes an item onto the top of the stack.
+- **Description:** This method adds an item to the top of the stack.
+- **Parameters:** 
+  - `item`: The item to be pushed onto the stack.
+- **Returns:** The item argument that was pushed onto the stack.
+
+### 5. `int search(E e)`
+
+- **Brief:** Searches for an element in the stack.
+- **Description:** This method searches the stack for a specific element and returns its 1-based position from the top of the stack. If the element is not found, the method returns `-1`.
+- **Parameters:** 
+  - `e`: The element to search for.
+- **Returns:** 
+  - The 1-based position of the element from the top of the stack.
+  - `-1` if the element is not found.
+
+
 ## Prerequisites
 
 Before you begin, ensure you have the following software installed:
@@ -49,7 +94,7 @@ If Maven is not already installed, follow these steps to install it:
      ```
    - Navigate to the project directory:
      ```bash
-     cd stack-project
+     cd stack
      ```
 
 2. **Build the Project**:
