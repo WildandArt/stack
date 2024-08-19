@@ -5,7 +5,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-
 import com.stack.project.Impl.stackImpl;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -17,7 +16,8 @@ public class stackTest {
 
     @BeforeEach
     public void setUp() {
-        st = new stackImpl<>();
+        // Initialize the stack with a capacity of 3 for testing
+        st = new stackImpl<>(3);
     }
 
     @AfterEach
@@ -31,6 +31,9 @@ public class stackTest {
         st.push(2);
         st.push(3);
         assertEquals(3, st.peek());
+
+        // Test pushing to a full stack
+        assertThrows(RuntimeException.class, () -> st.push(4), "Stack is full. Cannot push.");
     }
 
     @Test
@@ -40,6 +43,12 @@ public class stackTest {
         int popped = st.pop();
         assertEquals(2, popped);
         assertEquals(1, st.peek());
+
+        popped = st.pop();
+        assertEquals(1, popped);
+
+        // Test popping from an empty stack
+        assertThrows(RuntimeException.class, () -> st.pop(), "Stack is empty. Cannot pop.");
     }
 
     @Test
@@ -53,17 +62,19 @@ public class stackTest {
         assertEquals(-1, st.search(4));
     }
 
-
     @Test
     public void testExceptions() {
         assertThrows(RuntimeException.class, () -> {
             st.pop();
-        });
+        }, "Stack is empty. Cannot pop.");
 
         assertThrows(RuntimeException.class, () -> {
             st.peek();
-        });
+        }, "Stack is empty. Cannot peek.");
     }
 
-
+    @Test
+    public void testPrint() {
+        
+    }
 }

@@ -55,6 +55,11 @@ public class stackImpl <E> implements stack<E>  {
     @Override
     public E push(E item) {
 
+        if(capacity == (top + 1))
+        {
+            throw new RuntimeException("Stack is full. Cannot push.");
+        }
+
         array[++top] = item;
 
         return array[top];
@@ -63,12 +68,28 @@ public class stackImpl <E> implements stack<E>  {
     @Override
     public int search(E e) {
     
-        //int index = Arrays.asList(array).lastIndexOf(e);
-    
-        // if (index >= 0) {
-        //     return array.length - index;
-        // }
+       if(array.length < 1) {
+
+        return -1;
+
+       }
+
+       for(int i  = top; i >= 0; i--) {
+
+            if(array[i].equals(e)) {
+
+                return top - i + 1;
+
+            }
+
+       }
         return -1;
     
+    }
+    @Override
+    public String toString() {
+
+      return array.toString();
+
     }
 }
