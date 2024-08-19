@@ -4,59 +4,71 @@ import java.util.Vector;
 
 import com.stack.project.stack;
 
+
 public class stackImpl <E> implements stack<E>  {
 
-    private Vector<E> vec;
+    private E[] array;
 
-    public stackImpl() {
-        vec = new Vector<>(); 
+    private Integer top;
+
+    private Integer capacity;
+
+
+    @SuppressWarnings("unchecked")
+    public stackImpl(int size) {
+    
+        this.array = (E[]) new Object[size];
+    
+        capacity = size;
+    
+        top = -1;
+    
     }
     
     @Override
     public boolean empty() {
 
-        return vec.isEmpty();
+        return (-1 == top);
     
     }
 
     @Override
     public E peek() {
 
-        if(vec.isEmpty()) {
+        if(-1 == top) {
            throw new RuntimeException("Stack Is empty. Can not peek.");
         }
 
-        return vec.lastElement();
+        return array[top];
     }
 
     @Override
     public E pop() {
 
-        if(vec.isEmpty()) {
+        if(-1 == top) {
             throw new RuntimeException("Stack Is empty. Can not pop.");
         }
 
-        return vec.removeLast();
-
+        return array[top--];
     }
 
     @Override
     public E push(E item) {
 
-        vec.addElement(item);
-        return item;
+        array[++top] = item;
 
+        return array[top];
     }
 
     @Override
     public int search(E e) {
-
-        int index = vec.lastIndexOf(e);
-        if (index >= 0) {
-            return vec.size() - index;
-        }
+    
+        //int index = Arrays.asList(array).lastIndexOf(e);
+    
+        // if (index >= 0) {
+        //     return array.length - index;
+        // }
         return -1;
-
+    
     }
-
 }

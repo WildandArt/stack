@@ -1,14 +1,17 @@
+![Java](https://img.shields.io/badge/Java-22-007396?style=for-the-badge&logo=java)
+![JUnit](https://img.shields.io/badge/JUnit-5.0-25A162?style=for-the-badge&logo=junit5)
+
 #   Stack Project
 
 ## Overview
 
 This project implements a generic Stack data structure in Java. It includes basic stack operations such as push, pop, peek, and search, along with unit tests to ensure correctness.
 
-## `stack<E>` Interface Documentation
+### Interface Documentation
 
 The `stack<E>` interface defines the basic operations of a stack data structure, including methods for pushing, popping, peeking, checking if the stack is empty, and searching for elements.
 
-### 1. `boolean empty()`
+ 1. `boolean empty()`
 
 - **Brief:** Checks if the stack is empty.
 - **Description:** This method determines whether the stack contains any elements.
@@ -16,21 +19,21 @@ The `stack<E>` interface defines the basic operations of a stack data structure,
   - `true` if the stack is empty.
   - `false` if the stack contains one or more elements.
 
-### 2. `E peek()`
+2. `E peek()`
 
 - **Brief:** Returns the top element of the stack without removing it.
 - **Description:** This method allows the caller to view the element at the top of the stack without modifying the stack.
 - **Returns:** The top element of the stack.
 - **Throws:** `RuntimeException` if the stack is empty.
 
-### 3. `E pop()`
+3. `E pop()`
 
 - **Brief:** Removes and returns the top element of the stack.
 - **Description:** This method removes the top element from the stack and returns it.
 - **Returns:** The top element of the stack.
 - **Throws:** `RuntimeException` if the stack is empty.
 
-### 4. `E push(E item)`
+4. `E push(E item)`
 
 - **Brief:** Pushes an item onto the top of the stack.
 - **Description:** This method adds an item to the top of the stack.
@@ -38,7 +41,7 @@ The `stack<E>` interface defines the basic operations of a stack data structure,
   - `item`: The item to be pushed onto the stack.
 - **Returns:** The item argument that was pushed onto the stack.
 
-### 5. `int search(E e)`
+5. `int search(E e)`
 
 - **Brief:** Searches for an element in the stack.
 - **Description:** This method searches the stack for a specific element and returns its 1-based position from the top of the stack. If the element is not found, the method returns `-1`.
