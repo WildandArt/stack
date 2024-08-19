@@ -18,6 +18,9 @@ public interface stack<T> {
      */
     public boolean isEmpty();
 
+    public boolean isFull();
+
+
     /**
      * @brief Returns the top element of the stack without removing it.
      *
@@ -61,5 +64,10 @@ public interface stack<T> {
      *         or -1 if the element is not found
      */
     public int search(T e); 
+
+    public int size();
+
+    public int capacity();
+
 
 }

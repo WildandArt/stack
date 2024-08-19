@@ -1,9 +1,6 @@
 package com.stack.project.Impl;
 
-import java.util.Vector;
-
 import com.stack.project.stack;
-
 
 public class stackImpl <T> implements stack<T>  {
 
@@ -105,6 +102,30 @@ public class stackImpl <T> implements stack<T>  {
         objectString.append("|");
 
         return objectString.toString();
+
+    }
+
+    @Override
+    public boolean isFull() {
+        
+        return top == capacity - 1;
+    }
+
+    @Override
+    public int size() {
+        
+        if(top == -1) {
+            return 0;
+        }
+
+        return top + 1;
+
+    }
+
+    @Override
+    public int capacity() {
+        
+        return capacity;
 
     }
 }
