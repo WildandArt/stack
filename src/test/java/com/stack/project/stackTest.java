@@ -77,7 +77,7 @@ public class stackTest {
         st.push(1);
         st.push(2);
         st.push(3);
-        //String res = new String(st);
-        //assertEquals(res, );
+        
+        assertEquals(st.toString(), "|1, 2, 3|" );
     }
 }
