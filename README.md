@@ -11,7 +11,7 @@ This project implements a generic Stack data structure in Java. It includes basi
 
 The `stack<T>` interface defines the basic operations of a stack data structure, including methods for pushing, popping, peeking, checking if the stack is empty, and searching for elements.
 
- 1. `boolean empty()`
+ 1. `boolean isEmpty()`
 
 - **Brief:** Checks if the stack is empty.
 - **Description:** This method determines whether the stack contains any elements.

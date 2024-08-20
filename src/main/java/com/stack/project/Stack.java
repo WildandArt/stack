@@ -1,5 +1,4 @@
 package com.stack.project;
-
 /**
  * @brief 
  * The stack<T> interface provides methods for common stack operations such as 
@@ -10,7 +9,7 @@ package com.stack.project;
  *
  * @param <T> the type of elements in this stack
  */
-public interface stack<T> {
+public interface Stack<T> {
 
     /**
      * @brief Checks if the stack is empty.

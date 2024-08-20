@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class stackTest {
 
-    private stack<Integer> st;
+    private Stack<Integer> st;
 
     @BeforeEach
     public void setUp() {
@@ -77,6 +77,7 @@ public class stackTest {
         st.push(1);
         st.push(2);
         st.push(3);
-        System.out.println(st);
+        //String res = new String(st);
+        //assertEquals(res, );
     }
 }
